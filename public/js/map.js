@@ -8,7 +8,7 @@ attribution: '© OpenStreetMap'
 }).addTo(map);
 
 marker.addTo(map);
-var url = "/readFinal"
+var url = "/read"
 var aplicacion = new function(){
     this.tparameters = document.getElementById("tparameters");
     var plyln = [];
