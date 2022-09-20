@@ -38,7 +38,7 @@ app.get("/read", (req, res) =>{
     read(connection, result => {
         res.json(result);
         datos = result;
-        console.log(datos[0].Lat);
+        console.log(datos[0]);
     });
 });
 
