@@ -27,10 +27,10 @@ function readFinal(connection, callback){
 };
 
 function readRange(connection, callback){
-    //const a = dtnm1;
-    //const b = dtnm2;
-    const a =2;
-    const b =5;
+    var a = dtnm1;
+    var b = dtnm2;
+    //const a =2;
+    //const b =5;
     connection.query(`SELECT * FROM co_gps2 WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         callback(result);
