@@ -24,7 +24,7 @@ var aplicacion = new function(){
         (json).map(
             function (parameter,index, array){
                 datos+="<tr>";
-                datos+="<td>"+parameter.Id+"</td>";
+                datos+="<td>"+parameter.ID+"</td>";
                 datos+="<td>"+parameter.Lat+"</td>";
                 datos+="<td>"+parameter.Lng+"</td>";
                 datos+="<td>"+parameter.Time+"</td>";
