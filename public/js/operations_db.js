@@ -19,10 +19,10 @@ function read(connection, callback){
 };
 
 function readFinal(connection, callback){
-    connection.query("SELECT * FROM co_gps2 order by id DESC LIMIT 1", function (err, result){
+    connection.query("SELECT * FROM co_gps2", function (err, result){
         if (err) throw err;
         console.log(result[(Object.keys(result).length)-1])
-        callback(result);
+        callback(result[(Object.keys(result).length)-1]);
         //connection.end();
     });
 };
