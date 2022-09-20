@@ -44,7 +44,7 @@ app.get("/read", (req, res) =>{
 
 app.get("/readFinal", (req, res) =>{
     readFinal(connection, result => {
-        res.json(result);
+        res.json([result]);
         //datos = result;
         //console.log(datos[0].Lat);
     });
