@@ -6,7 +6,7 @@ function insert(connection, callback){
     connection.query(insertQuery, function(err, result){
         if(err) throw err;
         callback(result);
-        connection.end();
+        //connection.end();
     });
 };
 
