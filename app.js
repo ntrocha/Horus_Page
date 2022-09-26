@@ -50,13 +50,13 @@ app.get("/readFinal", (req, res) =>{
     });
 });
 
-// app.get("/readRange", (req, res) =>{
-//     readRange(connection, result => {
-//         res.json(result);
-//         // datos = result;
-//         // console.log(datos);
-//     });
-// });
+app.get("/readRange", (req, res) =>{
+    readRange(connection, result => {
+        res.json(result);
+        // datos = result;
+        // console.log(datos);
+    });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
