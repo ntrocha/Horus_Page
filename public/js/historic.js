@@ -1,9 +1,9 @@
 
 var dtnm1
 var dtnm2
-var boton = document.getElementById("btnH");
+//var boton = document.getElementById("btnH");
 
-boton.onclick = function (){
+save = function (){
         var optdate1;
         var optdate2;
         optdate1 = document.getElementById("since").value;
