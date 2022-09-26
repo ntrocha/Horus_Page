@@ -30,7 +30,7 @@ function readFinal(connection, callback){
 function readRange(connection, callback){
     //  var a = dtnm1.toString();
     //  var b = dtnm2.toString();
-    var a = '2022-09-26T13:21';
+    var a = '2022-09-26T13:22';
     var b = '2022-09-26T13:28';
     // var a = '1.664209075422E12';
     // var b = '1.664210299422E12';
