@@ -34,7 +34,7 @@ function readRange(connection, callback){
     var b = '1.664210299422E12';
     //const a =2;
     //const b =5;
-    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${'1'} AND ${'10'}`, function (err, result){
+    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
         callback(result);    
