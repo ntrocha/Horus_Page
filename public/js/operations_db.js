@@ -23,7 +23,7 @@ function readFinal(connection, callback){
         if (err) throw err;
         console.log(result[(Object.keys(result).length)-1])
         callback(result[(Object.keys(result).length)-1]);
-        //connection.end();
+        connection.end();
     });
 };
 
@@ -36,7 +36,7 @@ function readRange(connection, callback){
         if (err) throw err;
         console.log(result);
         callback(result);    
-        //connection.end();
+        connection.end();
     });
 }
 
