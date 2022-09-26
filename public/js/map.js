@@ -27,7 +27,7 @@ var aplicacion = new function(){
                 datos+="<td>"+parameter.ID+"</td>";
                 datos+="<td>"+parameter.Lat+"</td>";
                 datos+="<td>"+parameter.Lng+"</td>";
-                datos+="<td>"+new Date(Number(parameter.Time)).toLocaleDateString()+"</td>";
+                datos+="<td>"+new Date(Number(parameter.Time)).toLocaleDateString()+" "+new Date(Number(parameter.Time)).toLocaleTimeString()+"</td>";
                 datos+="</tr>";
                 var latlong = [Number(parameter.Lat), Number(parameter.Lng)]
                 marker.setLatLng(latlong);
