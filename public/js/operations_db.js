@@ -28,8 +28,8 @@ function readFinal(connection, callback){
 };
 
 function readRange(connection, callback){
-    var a = dtnm1;
-    var b = dtnm2;
+    var a = '2022-09-26T09:13';
+    var b = '2022-09-26T09:15';
     //const a =2;
     //const b =5;
     connection.query(`SELECT * FROM co_gps2 WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
