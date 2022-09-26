@@ -1,4 +1,6 @@
 
+const express = require('express')
+const app = express()
 var dtnm1
 var dtnm2
 //var boton = document.getElementById("btnH");
