@@ -35,6 +35,7 @@ function readRange(connection, callback){
     connection.query(`SELECT * FROM co_gps2 WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         callback(result);
+        console.log(result);
         //connection.end();
     });
 }

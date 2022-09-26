@@ -54,7 +54,7 @@ app.get("/readRange", (req, res) =>{
     readRange(connection, result => {
         res.json(result);
         datos = result;
-        console.log(datos[0].Lat);
+        console.log(datos);
     });
 });
 
