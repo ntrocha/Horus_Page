@@ -28,8 +28,8 @@ function readFinal(connection, callback){
 };
 
 function readRange(connection, callback){
-    var a = '2022-09-26T09:13:10';
-    var b = '2022-09-26T09:14:30';
+    var a = dtnm1;
+    var b = dtnm2;
     //const a =2;
     //const b =5;
     connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
