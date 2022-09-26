@@ -28,7 +28,7 @@ function readFinal(connection, callback){
 };
 
 function readRange(connection, callback){
-    const a = '1';
+    const a = '3';
     const b = '9';
     //const a =2;
     //const b =5;
