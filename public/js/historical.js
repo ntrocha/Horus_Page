@@ -40,7 +40,7 @@ var aplicacion = new function(){
     
         console.log(json);
         //Polilinea:
-        for (i=0; i < 9; i++){
+        for (i=0; i < len-1; i++){
             latlong = [Number(json[i].Lat), Number(json[i].Lng)]
             plyln.push(latlong);
         }       
