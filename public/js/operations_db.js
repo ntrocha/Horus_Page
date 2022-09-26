@@ -34,7 +34,7 @@ function readRange(connection, callback){
     const b = dtnm2;
     optdate1 = (document.getElementById("since").value).toString();
     dtnm1 = optdate1.substr(0,4) + optdate1.substr(5,2) + optdate1.substr(8,2) + optdate1.substr(11,2) + optdate1.substr(14,2);
-    optdate2 = document.getElementById("until").value;
+    optdate2 = document.getElementById("until").value.toString();
     dtnm2 = optdate2.substr(0,4) + optdate2.substr(5,2) + optdate2.substr(8,2) + optdate2.substr(11,2) + optdate2.substr(14,2);
 
     connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
