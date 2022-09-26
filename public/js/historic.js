@@ -18,6 +18,6 @@ var dtnm2
         //dtnm2 = 5;
         
     };
-
-    export default {dtnm1, dtnm2}; 
+    save();
+    module.exports = {dtnm1, dtnm2}; 
 
