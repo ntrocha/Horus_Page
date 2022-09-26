@@ -14,9 +14,10 @@ var dtnm2
 
         optdate2 = document.getElementById("until").value;
         console.log(optdate2);
-        dtnm2= Date.UTC(optdate2);
+        dtnm2= Date.UTC(optdate2)
         console.log(dtnm2);
         //dtnm2 = 5;
     }//,
 
 //module.exports = {dtnm1, dtnm2};
+//(moment().utc().format('YMDHHmmss'))

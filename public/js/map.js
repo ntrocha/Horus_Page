@@ -23,11 +23,14 @@ var aplicacion = new function(){
         console.log(json);
         (json).map(
             function (parameter,index, array){
+                let dt = (parameter.Time)
+                let dtm = dt.substr(0,4) + "-" + dt.substr(4,2) +  "-" + dt.substr(6,2) + "T" + 
+                          dt.substr(8,2) + ":" + dt.substr(10,2);
                 datos+="<tr>";
                 datos+="<td>"+parameter.ID+"</td>";
                 datos+="<td>"+parameter.Lat+"</td>";
                 datos+="<td>"+parameter.Lng+"</td>";
-                datos+="<td>"+new Date(Number(parameter.Time)).toLocaleDateString()+" "+new Date(Number(parameter.Time)).toLocaleTimeString()+"</td>";
+                datos+="<td>"+new Date(dtm).toLocaleDateString()+" "+new Date(dtm).toLocaleTimeString()+"</td>";
                 datos+="</tr>";
                 var latlong = [Number(parameter.Lat), Number(parameter.Lng)]
                 marker.setLatLng(latlong);
