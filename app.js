@@ -4,7 +4,7 @@ const port = 8080;
 const mysql = require("mysql");
 require("dotenv").config();
 
-const {insert, read, readFinal} = require("./public/js/operations_db");
+const {insert, read, readFinal, readRange} = require("./public/js/operations_db");
 
 app.use(express.static('public'))
 
@@ -50,6 +50,13 @@ app.get("/readFinal", (req, res) =>{
     });
 });
 
+app.get("/readRange", (req, res) =>{
+    readRange(connection, result => {
+        res.json(result);
+        // datos = result;
+        // console.log(datos);
+    });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
