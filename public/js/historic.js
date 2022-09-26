@@ -3,7 +3,7 @@ var dtnm1
 var dtnm2
 //var boton = document.getElementById("btnH");
 
-save = function (){
+    function save() {
         var optdate1;
         var optdate2;
         optdate1 = document.getElementById("since").value;
