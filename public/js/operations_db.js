@@ -23,20 +23,20 @@ function readFinal(connection, callback){
         if (err) throw err;
         console.log(result[(Object.keys(result).length)-1])
         callback(result[(Object.keys(result).length)-1]);
-        connection.end();
+        //connection.end();
     });
 };
 
 function readRange(connection, callback){
-    var a = '2022-09-26T09:13:10';
-    var b = '2022-09-26T09:14:10';
+    var a = '1';
+    var b = '10';
     //const a =2;
     //const b =5;
-    connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
+    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
         callback(result);    
-        connection.end();
+        //connection.end();
     });
 }
 
