@@ -28,8 +28,8 @@ function readFinal(connection, callback){
 };
 
 function readRange(connection, callback){
-    const a = '3';
-    const b = '9';
+    const a = 3;
+    const b = 9;
     //const a =2;
     //const b =5;
     connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
