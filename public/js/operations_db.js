@@ -34,9 +34,9 @@ function readRange(connection, callback){
     //var b = '2022-09-26T13:25';
     // var a = '1.664209075422E12';
     // var b = '1.664210299422E12';
-    const a =1;
-    const b =10;
-    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
+    const a ="202209261730";
+    const b ="202209261732";
+    connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
         callback(result);    
