@@ -19,5 +19,5 @@ var dtnm2
         
     };
 
-module.exports = {dtnm1, dtnm2};
-//(moment().utc().format('YMDHHmmss'))
+    export default {dtnm1, dtnm2}; 
+
