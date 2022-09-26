@@ -36,7 +36,7 @@ function readRange(connection, callback){
         if (err) throw err;
         console.log(result);
         callback(result);    
-        //connection.end();
+        connection.end();
     });
 }
 
