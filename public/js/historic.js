@@ -15,6 +15,6 @@ save = function (){
     dtnm2= Date.UTC(optdate2);
     console.log(dtnm2);
     //dtnm2 = 5;
-}//,
+},
 
-//module.exports = {dtnm1, dtnm2};
+module.exports = {dtnm1, dtnm2};
