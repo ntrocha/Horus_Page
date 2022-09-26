@@ -16,8 +16,27 @@ var dtnm2
         console.log(optdate2);
         dtnm2 = optdate2.substr(0,4) + optdate2.substr(5,2) + optdate2.substr(8,2) + optdate2.substr(11,2) + optdate2.substr(14,2);
         console.log(dtnm2);
-        //dtnm2 = 5;
-        module.exports = {dtnm1, dtnm2};
+
+        function readRange(connection, callback){
+            // const a ="202209261730";
+            // const b ="202209261732";
+            const a = dtnm1;
+            const b = dtnm2;
+            connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
+                if (err) throw err;
+                console.log(result);
+                callback(result);    
+                //connection.end();
+            });
+        };
+
+        app.get("/readRange", (req, res) =>{
+            readRange(connection, result => {
+                res.json(result);
+                // datos = result;
+                // console.log(datos);
+            });
+        });
     };
 
 
