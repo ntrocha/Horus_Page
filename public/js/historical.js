@@ -1,7 +1,7 @@
 
 optdate1 = (document.getElementById("since").value).toString();
 if (optdate1){
-
+function historical () {
     var marker = L.marker([51.5, -0.09]);
     var marker2 = L.marker([51.5, -0.09]);
     var map = L.map('map2').setView([51.505, -0.09], 13);
@@ -53,4 +53,5 @@ if (optdate1){
                 };
             }
             aplicacion.Leer();
+    }
 }
