@@ -1,16 +1,12 @@
-//function historical(){
 
-    //optdate1 = (document.getElementById("since").value);
-    //if (optdate1){
+var marker = L.marker([51.5, -0.09]);
+var marker2 = L.marker([51.5, -0.09]);
+var map = L.map('map2').setView([51.505, -0.09], 13);
 
-        var marker = L.marker([51.5, -0.09]);
-        var marker2 = L.marker([51.5, -0.09]);
-        var map = L.map('map2').setView([51.505, -0.09], 13);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
-        }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+maxZoom: 19,
+attribution: '© OpenStreetMap'
+}).addTo(map);
 
         marker.addTo(map);
         var url = "/readRange"
@@ -54,5 +50,3 @@
             };
         }
         aplicacion.Leer();
-    //}
-//}
