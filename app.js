@@ -50,15 +50,17 @@ app.get("/readFinal", (req, res) =>{
     });
 });
 
-app.get("/readRange", (req, res) =>{
-    readRange(connection, result => {
-        res.json(result);
-        // datos = result;
-        // console.log(datos);
-    }, setInterval(readRange, 1000)
-    );
-});
-
+function readR () {
+    app.get("/readRange", (req, res) =>{
+        readRange(connection, result => {
+            res.json(result);
+            // datos = result;
+            // console.log(datos);
+        }, setInterval(readRange, 1000)
+        );
+    });
+};
+readR();
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
