@@ -20,6 +20,6 @@ function save2 () {
     //dtnm2 = 5;
 };
 
-export{save1, save2};
+module.exports = require (save1, save2);
 
 
