@@ -33,11 +33,11 @@ function readFinal(connection, callback){
 function readRange(connection, callback){
     const a ="202209261730";
     const b ="202209261732";
-    //optdate1 = (document.getElementById("since").value);
-    //if (optdate1){
-    //const a = dtnm1;
-    //const b = dtnm2;
-    //}
+    optdate1 = (document.getElementById("since").value);
+    if (optdate1){
+    const a = dtnm1;
+    const b = dtnm2;
+    }
     connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
