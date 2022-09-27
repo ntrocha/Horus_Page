@@ -73,4 +73,5 @@ function historicos() {
                 }
                 aplicacion.Leer();
     };
-}
+};
+historicos();
