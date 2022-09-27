@@ -55,7 +55,7 @@ app.get("/readRange", (req, res) =>{
         res.json(result);
         // datos = result;
         // console.log(datos);
-    }, setInterval(readRange, 10000)
+    }, setInterval(readRange, 1000)
     );
 });
 
