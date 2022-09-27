@@ -1,5 +1,6 @@
 const mysql = require('mysql');
-
+const {readR} = require("/home/maxtrong/Documentos/NodeServ/web_serv2/app");
+const {inicio, final} = require ("./historic");
 function insert(connection, callback){
     let insertQuery = "INSERT INTO co_gps2(Lat,Lng) VALUES('1','1')";
     connection.query(insertQuery, function(err, result){
@@ -28,16 +29,17 @@ function readFinal(connection, callback){
 
 
 async function readRange(connection, callback){
-     const a ="202209261730";
-     const b ="202209261732";
+
+     //const a ="202209261730";
+     //const b ="202209261732";
     // optdate1 = (document.getElementById("since").value).toString();
     // dtnm1 = optdate1.substr(0,4) + optdate1.substr(5,2) + optdate1.substr(8,2) + optdate1.substr(11,2) + optdate1.substr(14,2);
     // const a =dtnm1;
     // optdate2 = (document.getElementById("until").value).toString();
     // dtnm2 = optdate2.substr(0,4) + optdate2.substr(5,2) + optdate2.substr(8,2) + optdate2.substr(11,2) + optdate2.substr(14,2);
     // const b =dtnm2;
-    // const a = 1;
-    // const b = 5;
+     const a = inicio();
+     const b = final();
     connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
