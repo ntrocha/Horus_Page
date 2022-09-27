@@ -1,6 +1,5 @@
 const mysql = require('mysql');
-const { dtnm1, dtnm2 } = require("./historic").default;
-//import { dtnm1, dtnm2 }  from "./historic";
+//const { dtnm1, dtnm2 } = require("./historic").default;
 function insert(connection, callback){
     let insertQuery = "INSERT INTO co_gps2(Lat,Lng) VALUES('1','1')";
     connection.query(insertQuery, function(err, result){
@@ -28,17 +27,12 @@ function readFinal(connection, callback){
 };
 
 
-
-
 function readRange(connection, callback){
-    const a ="202209261730";
-    const b ="202209261732";
-    //optdate1 = (document.getElementById("since").value);
-    //if (optdate1){
-    //const a = dtnm1;
-    //const b = dtnm2;
-    //}
-    connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
+    //const a ="202209261730";
+    //const b ="202209261732";
+    const a = 1;
+    const b = 5;
+    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
         callback(result);    
