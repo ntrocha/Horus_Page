@@ -31,8 +31,8 @@ function readFinal(connection, callback){
 
 
 function readRange(connection, callback){
-    // const a ="202209261730";
-    // const b ="202209261732";
+    const a ="202209261730";
+    const b ="202209261732";
     optdate1 = (document.getElementById("since").value);
     if (optdate1){
     const a = dtnm1;
