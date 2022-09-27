@@ -1,7 +1,7 @@
 function historical(){
-    
+
     optdate1 = (document.getElementById("since").value);
-    if (optdate1){
+    //if (optdate1){
 
         var marker = L.marker([51.5, -0.09]);
         var marker2 = L.marker([51.5, -0.09]);
@@ -54,5 +54,5 @@ function historical(){
             };
         }
         aplicacion.Leer();
-    }
+    //}
 }
