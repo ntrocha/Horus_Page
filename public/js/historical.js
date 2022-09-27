@@ -1,53 +1,10 @@
 
-const express = require('express')
-const app = express()
-const port = 8080;
-const mysql = require("mysql");
-require("dotenv").config();
-
-app.use(express.json());
-//DATA BASE MYSQL 
-var datos;
-
-const connection = mysql.createConnection({
-    host: process.env.Host,
-    user: process.env.user,
-    password: process.env.password,
-    database: process.env.database,
-});
-
-connection.connect((err) => {
-    if (err) throw err;
-    console.log("Connected to database");
-})
 
 function historicos() {
 
     optdate1 = (document.getElementById("since").value).toString();
     if (optdate1){
         //
-        function readRange(connection, callback){
-            const a ="202209261730";
-            const b ="202209261732";
-            // const a = 1;
-            // const b = 5;
-            connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
-                if (err) throw err;
-                console.log(result);
-                callback(result);    
-                //connection.end();
-            });
-        }
-        //
-        app.get("/readRange", (req, res) =>{
-            readRange(connection, result => {
-                res.json(result);
-                // datos = result;
-                // console.log(datos);
-            });
-        });
-
-
         //
         var marker = L.marker([51.5, -0.09]);
         var marker2 = L.marker([51.5, -0.09]);
