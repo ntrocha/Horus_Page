@@ -2,7 +2,7 @@ var dtnm1
 var dtnm2
 
 
-    function save() {
+    save = function () {
         var optdate1;
         var optdate2;
         optdate1 = (document.getElementById("since").value).toString();
@@ -18,6 +18,6 @@ var dtnm2
         //dtnm2 = 5;
         
     };
-    save();
-    module.exports = {dtnm1, dtnm2}; 
+
+module.exports = {dtnm1, dtnm2}; 
 
