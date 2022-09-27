@@ -27,9 +27,15 @@ function readFinal(connection, callback){
 };
 
 
-function readRange(connection, callback){
-    const a ="202209261730";
-    const b ="202209261732";
+async function readRange(connection, callback){
+    // const a ="202209261730";
+    // const b ="202209261732";
+    optdate1 = (document.getElementById("since").value).toString();
+    dtnm1 = optdate1.substr(0,4) + optdate1.substr(5,2) + optdate1.substr(8,2) + optdate1.substr(11,2) + optdate1.substr(14,2);
+    const a =dtnm1;
+    optdate2 = (document.getElementById("until").value).toString();
+    dtnm2 = optdate2.substr(0,4) + optdate2.substr(5,2) + optdate2.substr(8,2) + optdate2.substr(11,2) + optdate2.substr(14,2);
+    const b =dtnm2;
     // const a = 1;
     // const b = 5;
     connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
