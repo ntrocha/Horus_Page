@@ -1,6 +1,6 @@
 //function historical(){
 
-    optdate1 = (document.getElementById("since").value);
+    //optdate1 = (document.getElementById("since").value);
     //if (optdate1){
 
         var marker = L.marker([51.5, -0.09]);
