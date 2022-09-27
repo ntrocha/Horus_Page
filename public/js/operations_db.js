@@ -1,5 +1,4 @@
 const mysql = require('mysql');
-//const { dtnm1, dtnm2 } = require("./historic").default;
 function insert(connection, callback){
     let insertQuery = "INSERT INTO co_gps2(Lat,Lng) VALUES('1','1')";
     connection.query(insertQuery, function(err, result){
