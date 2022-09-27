@@ -1,4 +1,4 @@
-function historical(){
+//function historical(){
 
     optdate1 = (document.getElementById("since").value);
     //if (optdate1){
@@ -55,4 +55,4 @@ function historical(){
         }
         aplicacion.Leer();
     //}
-}
+//}
