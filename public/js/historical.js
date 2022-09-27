@@ -1,11 +1,19 @@
 
-
+const {readRange} = require("./operations_db");
+const mysql = require("mysql");
+require("dotenv").config();
 function historicos() {
 
     optdate1 = (document.getElementById("since").value).toString();
     if (optdate1){
         //
         //
+        const connection = mysql.createConnection({
+            host: process.env.Host,
+            user: process.env.user,
+            password: process.env.password,
+            database: process.env.database,
+        });
         var marker = L.marker([51.5, -0.09]);
         var marker2 = L.marker([51.5, -0.09]);
         var map = L.map('map2').setView([51.505, -0.09], 13);
@@ -16,7 +24,14 @@ function historicos() {
         }).addTo(map);
 
                 marker.addTo(map);
-                var url = "/readRange"
+
+                var rs;
+                var url = readRange(connection, result => {
+                    res.json(result);
+                    rs = result;
+                    });
+                
+
                 var aplicacion = new function(){
                     this.tparameters = document.getElementById("tparameters");
                     var plyln = [];
@@ -25,7 +40,7 @@ function historicos() {
 
                         var datos="";
                         
-                        const response  = await fetch(url)
+                        const response  = await fetch(rs)
                         const json = await response.json();
                         var j1;
                         var j2;
