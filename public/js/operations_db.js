@@ -1,5 +1,4 @@
 const mysql = require('mysql');
-const {readR} = require("/home/maxtrong/Documentos/NodeServ/web_serv2/app");
 const {inicio, final} = require ("./historic");
 function insert(connection, callback){
     let insertQuery = "INSERT INTO co_gps2(Lat,Lng) VALUES('1','1')";
