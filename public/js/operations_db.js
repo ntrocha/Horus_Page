@@ -27,11 +27,11 @@ function readFinal(connection, callback){
 
 
 function readRange(connection, callback){
-    //const a ="202209261730";
-    //const b ="202209261732";
-    const a = 1;
-    const b = 5;
-    connection.query(`SELECT * FROM prueba WHERE Lat BETWEEN ${a} AND ${b}`, function (err, result){
+    const a ="202209261730";
+    const b ="202209261732";
+    // const a = 1;
+    // const b = 5;
+    connection.query(`SELECT * FROM prueba WHERE Time BETWEEN ${a} AND ${b}`, function (err, result){
         if (err) throw err;
         console.log(result);
         callback(result);    
