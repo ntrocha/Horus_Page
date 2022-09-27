@@ -19,5 +19,5 @@ var dtnm2
         
     };
 
-module.exports = {dtnm1, dtnm2}; 
+//module.exports = {dtnm1, dtnm2}; 
 
